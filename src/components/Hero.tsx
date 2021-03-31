@@ -1,5 +1,6 @@
-import { Flex, Heading, Stack, HStack, SimpleGrid, Wrap, Center } from '@chakra-ui/react'
+import { Flex, Heading, Stack, HStack, SimpleGrid, Wrap, Center, Link } from '@chakra-ui/react'
 import { Container } from 'next/app'
+import NextLink from "next/link"
 
 const institutions = {
   1: "Oxford University",
@@ -9,25 +10,27 @@ const institutions = {
 const authors = [
   {
     'name': 'Luke Melas-Kyraizi',
-    'institutions': [1, 2]
+    'institutions': [1, 2],
+    'url': "https://lukemelas.github.io/"
   },
 ]
 
 export const Hero = ({ title }: { title: string }) => (
   <Container>
-    <Heading fontSize="calc(20px + 0.5vw)" pt="5vh" pb="1vh">{title}</Heading>
-    <Wrap justify="center">
-
+    <Heading fontSize="3xl" pt="7vh">{title}</Heading>
+    <Wrap justify="center" pt="3vh" fontSize="xl">
       {
         authors.map((author) =>
           <span>
-            {author.name}
+            <NextLink href={author.url} passHref={true}>
+              <Link>{author.name}</Link>
+            </NextLink>
             <sup> {author.institutions.toString()}</sup>
           </span>
         )
       }
     </Wrap>
-    <Wrap justify="center">
+    <Wrap justify="center" pt="2vh">
       {
         Object.entries(institutions).map(tuple =>
           <span>
@@ -37,7 +40,6 @@ export const Hero = ({ title }: { title: string }) => (
         )
       }
     </Wrap>
-    <Heading fontSize="calc(16px + 0.5vw)">Authors</Heading>
   </Container>
 )
 
