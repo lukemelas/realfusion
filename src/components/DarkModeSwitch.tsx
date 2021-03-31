@@ -1,5 +1,4 @@
 import { useColorMode, Switch, FormLabel, Stack } from '@chakra-ui/react'
-import { Container } from 'next/app'
 
 export const DarkModeSwitch = () => {
   const { colorMode, toggleColorMode } = useColorMode()
