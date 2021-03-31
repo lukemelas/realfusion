@@ -10,7 +10,7 @@
 
 # next.js
 /.next/
-# /out/  # we will commit this to serve it on github
+/out/
 
 # production
 /build
