@@ -30,7 +30,7 @@ const Index = () => (
       {/* Example */}
       <Heading fontSize="2xl" pb="1rem">Examples</Heading>
       <img
-        src="/images/example.png"
+        src={`${process.env.BASE_PATH || ""}/images/example.png`}
       // width={500}
       // height={500}
       />

@@ -11,8 +11,8 @@ export const DarkModeSwitch = () => {
       right="1rem"
     >
       <FormLabel htmlFor="dark-mode-switch" mt="-3px" opacity="0.3">
-        Dark
-    </FormLabel>
+        {isDark ? "Dark" : "Light"}
+      </FormLabel>
       <Switch
         color="green"
         isChecked={isDark}
