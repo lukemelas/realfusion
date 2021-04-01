@@ -1,6 +1,4 @@
-import { Link as ChakraLink, Text, Code, List, ListIcon, ListItem, Center, Heading, UnorderedList, } from '@chakra-ui/react'
-import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
-import Image from 'next/image'
+import { Link as ChakraLink, Text, Code, ListItem, Heading, UnorderedList, } from '@chakra-ui/react'
 import { Hero } from 'components/Hero'
 import { Container } from 'components/Container'
 import NextLink from 'next/link'
@@ -31,11 +29,10 @@ const Index = () => (
 
       {/* Example */}
       <Heading fontSize="2xl" pb="1rem">Examples</Heading>
-      <Image
+      <img
         src="/images/example.png"
-        alt="Picture of the author"
-        width={500}
-        height={500}
+      // width={500}
+      // height={500}
       />
       <Text align="center" pt="0.5rem" pb="0.5rem" fontSize="small">This is a caption</Text>
 
