@@ -1,4 +1,4 @@
-import { Flex, Heading, Stack, HStack, SimpleGrid, Wrap, Center, Link } from '@chakra-ui/react'
+import { Heading, Wrap, Link as ChakraLink } from '@chakra-ui/react'
 import { Container } from 'next/app'
 import NextLink from "next/link"
 
@@ -17,20 +17,20 @@ const authors = [
 
 export const Hero = ({ title }: { title: string }) => (
   <Container>
-    <Heading fontSize="3xl" pt="7vh">{title}</Heading>
-    <Wrap justify="center" pt="3vh" fontSize="xl">
+    <Heading fontSize="3xl" pt="3rem">{title}</Heading>
+    <Wrap justify="center" pt="1rem" fontSize="xl" key="authors">
       {
         authors.map((author) =>
-          <span>
+          <span key={author.name}>
             <NextLink href={author.url} passHref={true}>
-              <Link>{author.name}</Link>
+              <ChakraLink>{author.name}</ChakraLink>
             </NextLink>
             <sup> {author.institutions.toString()}</sup>
           </span>
         )
       }
     </Wrap>
-    <Wrap justify="center" pt="2vh">
+    <Wrap justify="center" pt="1rem" key="institutions">
       {
         Object.entries(institutions).map(tuple =>
           <span>
