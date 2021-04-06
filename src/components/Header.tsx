@@ -2,22 +2,28 @@ import { Heading, Wrap, Box, Link as ChakraLink } from '@chakra-ui/react'
 import { Container } from 'next/app'
 import NextLink from "next/link"
 
+const title = "Title"
+
 const institutions = {
   1: "Oxford University",
-  2: "Harvard University",
+  2: "Oxford University"
 }
 
 const authors = [
   {
-    'name': 'Luke Melas-Kyraizi',
+    'name': 'Luke Melas-Kyriazi',
     'institutions': [1, 2],
-    'url': "https://lukemelas.github.io/"
+    'url': "https://github.com/lukemelas/"
   },
 ]
 
-export const Hero = ({ title }: { title: string }) => (
+export const Title = () => (
+  <Heading fontSize="2xl" pt="3rem" maxW="42rem" textAlign="center">{title}</Heading>
+)
+
+
+export const Authors = () => (
   <Container>
-    <Heading fontSize="2xl" pt="3rem" maxW="42rem" textAlign="center">{title}</Heading>
     <Wrap justify="center" pt="1rem" fontSize="xl" key="authors">
       {
         authors.map((author) =>
@@ -42,7 +48,3 @@ export const Hero = ({ title }: { title: string }) => (
     </Wrap>
   </Container>
 )
-
-Hero.defaultProps = {
-  title: 'Academic Project Template',
-}
