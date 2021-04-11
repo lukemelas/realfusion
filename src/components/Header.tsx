@@ -2,20 +2,8 @@ import { Heading, Wrap, Box, Link as ChakraLink } from '@chakra-ui/react'
 import { Container } from 'next/app'
 import NextLink from "next/link"
 
-const title = "Title"
+import { title, institutions, authors } from 'data'
 
-const institutions = {
-  1: "Oxford University",
-  2: "Oxford University"
-}
-
-const authors = [
-  {
-    'name': 'Luke Melas-Kyriazi',
-    'institutions': [1, 2],
-    'url': "https://github.com/lukemelas/"
-  },
-]
 
 export const Title = () => (
   <Heading fontSize="2xl" pt="3rem" maxW="42rem" textAlign="center">{title}</Heading>
