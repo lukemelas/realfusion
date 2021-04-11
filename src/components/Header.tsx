@@ -27,7 +27,7 @@ export const Authors = () => (
     <Wrap justify="center" pt="1rem" key="institutions">
       {
         Object.entries(institutions).map(tuple =>
-          <Box>
+          <Box key={tuple[0]}>
             <sup>{tuple[0]}  </sup>
             {tuple[1]}
           </Box>
