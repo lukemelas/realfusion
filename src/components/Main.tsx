@@ -1,5 +1,4 @@
-import { Stack, StackProps } from '@chakra-ui/react'
-import { Container } from 'next/app'
+import { Container, StackProps } from '@chakra-ui/react'
 
 export const Main = (props: StackProps) => (
   <Container

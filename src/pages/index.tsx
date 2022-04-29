@@ -1,7 +1,6 @@
 import { Link as ChakraLink, Text, Code, ListItem, Heading, UnorderedList } from '@chakra-ui/react'
 import { Title, Authors } from 'components/Header'
 import { Container } from 'components/Container'
-import NextLink from 'next/link'
 import { DarkModeSwitch } from 'components/DarkModeSwitch'
 import { LinksRow } from 'components/LinksRow'
 import { Footer } from 'components/Footer'
@@ -49,7 +48,7 @@ const Index = () => (
 
       {/* Citation */}
       <Heading fontSize="2xl" pt="2rem" pb="1rem">Citation</Heading>
-      <Code p="0.5rem" borderRadius="5px">  {/*  fontFamily="monospace" */}
+      <Code p="0.5rem" borderRadius="5px" overflow="scroll" whiteSpace="nowrap">  {/*  fontFamily="monospace" */}
         @inproceedings&#123; <br />
           &nbsp;&nbsp;&nbsp;&nbsp;{citationId}, <br />
           &nbsp;&nbsp;&nbsp;&nbsp;title=&#123;{title}&#125; <br />

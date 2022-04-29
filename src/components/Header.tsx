@@ -1,5 +1,4 @@
-import { Heading, Wrap, Box, Link as ChakraLink } from '@chakra-ui/react'
-import { Container } from 'next/app'
+import { Heading, Wrap, Box, Container, Link as ChakraLink } from '@chakra-ui/react'
 import NextLink from "next/link"
 
 import { title, institutions, authors } from 'data'
