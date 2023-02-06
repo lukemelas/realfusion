@@ -32,18 +32,21 @@ const Index = () => (
     <Container w="100%" maxW="60rem" alignItems="left" pl="1rem" pr="1rem">
 
       {/* Abstract */}
-      <Heading fontSize="2xl" pb="1rem">Abstract</Heading>
+      <Heading fontWeight="light" fontSize="2xl" pb="1rem">Abstract</Heading>
       <Text pb="2rem">{abstract}</Text>
 
       {/* Example */}
-      <Heading fontSize="2xl" pb="1rem">Examples</Heading>
-      <img src={`${process.env.BASE_PATH || ""}/images/example.png`} />
-      <Text align="center" pt="0.5rem" pb="0.5rem" fontSize="small">This is a caption</Text>
+      <Heading fontWeight="light" fontSize="2xl" pb="1rem">Examples</Heading>
+      <video autoPlay loop src={`${process.env.BASE_PATH || ""}/videos/examples.mp4`} />
+      <Text maxW="50rem" margin="auto" pt="0.5rem" pb="0.5rem" fontSize="small">
+        <Text as="span" fontWeight="bold">Examples.</Text> RealFusion reconstructions from a single input view.
+      </Text>
 
       {/* Another Section */}
-      <Heading fontSize="2xl" pt="2rem" pb="1rem" id="dataset">Another Section</Heading>
-      <Text >
-        Here we have...
+      <Heading fontWeight="light" fontSize="2xl" pt="2rem" pb="1rem" id="dataset">Diagram</Heading>
+      <Text ><img src={`${process.env.BASE_PATH || ""}/images/method-diagram-v3.png`} /></Text>
+      <Text maxW="50rem" margin="auto" pt="0.5rem" pb="0.5rem" fontSize="small">
+        <Text as="span" fontWeight="bold">Method diagram.</Text> Our method optimizes a neural radiance field using two objectives simultaneously: a reconstruction objective and a prior objective. The reconstruction objective ensures that the radiance field resembles the input image from a specific, fixed view. The prior objective uses a large pre-trained diffusion model to ensure that the radiance field looks like the given object from randomly sampled novel viewpoints. The key to making this process work well is to condition the diffusion model on a prompt with a custom token <Text as="span" fontWeight="bold">&lt;e&gt;</Text>, which is generated prior to reconstruction using single-image textual inversion.
       </Text>
 
       {/* Citation */}
@@ -69,6 +72,7 @@ const Index = () => (
     <Footer>
       <Text></Text>
     </Footer>
+    
   </Container >
 )
 

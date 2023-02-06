@@ -1,15 +1,15 @@
 // Project title
-export const title = "Projection-Conditioned Point Cloud Diffusion for Single-Image 3D Reconstruction"
+export const title = "RealFusion: 360° Reconstruction of Any Object from a Single Image"
 
 // Short version of the abstract
 export const description = "We propose a novel method for single-image 3D reconstruction which generates a sparse point cloud via a conditional denoising diffusion process with a geometrically-consistent conditioning process which we call projection conditioning."
 
 // Abstract
-export const abstract = "Reconstructing the 3D shape of an object from a single RGB image is a long-standing and highly challenging problem in computer vision. In this paper, we propose a novel method for single-image 3D reconstruction which generates a sparse point cloud via a conditional denoising diffusion process. Our method takes as input a single RGB image along with its camera pose and gradually denoises a set of 3D points, whose positions are initially sampled randomly from a three-dimensional Gaussian distribution, into the shape of an object. The key to our method is a geometrically-consistent conditioning process which we call projection conditioning: at each step in the diffusion process, we project local image features onto the partially-denoised point cloud from the given camera pose. This projection conditioning process enables us to generate high-resolution sparse geometries that are well-aligned with the input image, and can additionally be used to predict point colors after shape reconstruction. Moreover, due to the probabilistic nature of the diffusion process, our method is naturally capable of generating multiple different shapes consistent with a single input image. In contrast to prior work, our approach not only performs well on synthetic benchmarks, but also gives large qualitative improvements on complex real-world data."
+export const abstract = "We consider the problem of reconstructing a full 360° photographic model of an object from a single image of it. We do so by fitting a neural radiance field to the image, but find this problem to be severely ill-posed. We thus take an off-the-self conditional image generator based on diffusion and engineer a prompt that encourages it to ``dream up'' novel views of the object. Using an approach inspired by DreamFields and DreamFusion, we fuse the given input view, the conditional prior, and other regularizers in a final, consistent reconstruction. We demonstrate state-of-the-art reconstruction results on benchmark images when compared to prior methods for monocular 3D reconstruction of objects. Qualitatively, our reconstructions provide a faithful match of the input view and a plausible extrapolation of its appearance and 3D shape, including to the side of the object not visible in the image."
 
 // Institutions
 export const institutions = {
-  1: "Oxford University",
+  1: "VGG Group, Oxford University",
 }
 
 // Authors
@@ -24,11 +24,11 @@ export const authors = [
     'institutions': [1],
     'url': "https://chrirupp.github.io/"
   },
-  // {
-  //   'name': 'Iro Laina',
-  //   'institutions': [1],
-  //   'url': "http://campar.in.tum.de/Main/IroLaina"
-  // },
+  {
+    'name': 'Iro Laina',
+    'institutions': [1],
+    'url': "http://campar.in.tum.de/Main/IroLaina"
+  },
   {
     'name': 'Andrea Vedaldi',
     'institutions': [1],
@@ -39,14 +39,14 @@ export const authors = [
 // Links
 export const links = {
   'paper': "#", // "https://arxiv.org/abs/2002.00733",
-  'github': "https://github.com/lukemelas/projection-conditioned-point-cloud-diffusion"
+  'github': "https://github.com/lukemelas/realfusion"
 }
 
 // Acknowledgements
-export const acknowledgements = "We thank xyz for abc..."
+export const acknowledgements = "L.M.K. is supported by the Rhodes Trust. A.V. and C.R. are supported by ERC-UNION-CoG-101001212. C.R. is also supported by VisualAI EP/T028572/1."
 
 // Citation
-export const citationId = "melaskyriazi2023projection"
+export const citationId = "melaskyriazi2023realfusion"
 export const citationAuthors = "Luke Melas-Kyriazi and Christian Rupprecht and Iro Laina and Andrea Vedaldi"
 export const citationYear = "2023"
 export const citationBooktitle = "Arxiv"
