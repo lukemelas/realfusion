@@ -4,7 +4,7 @@ export const Main = (props: StackProps) => (
   <Container
     spacing="1.5rem"
     width="100%"
-    maxWidth="52rem"
+    maxWidth="60rem"
     mt="-45vh"
     pt="8rem"
     px="1rem"

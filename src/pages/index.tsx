@@ -19,7 +19,7 @@ const Index = () => (
     <LinksRow />
 
     {/* Video */}
-    <Container w="90vw" h="50.6vw" maxW="700px" maxH="393px" mb="3rem">
+    <Container w="90vw" h="50.6vw" maxW="50rem" maxH="25rem" mb="3rem">
       <iframe
         width="100%" height="100%"
         src={video_url}
@@ -29,7 +29,7 @@ const Index = () => (
     </Container>
 
     {/* Main */}
-    <Container w="100%" maxW="44rem" alignItems="left" pl="1rem" pr="1rem">
+    <Container w="100%" maxW="60rem" alignItems="left" pl="1rem" pr="1rem">
 
       {/* Abstract */}
       <Heading fontSize="2xl" pb="1rem">Abstract</Heading>

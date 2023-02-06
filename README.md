@@ -1,5 +1,11 @@
 #### Academic Website Project Template
 
+#### TODO:
+
+- [ ] Code
+- [ ] Gifs
+- [ ] Short video
+
 Remember to edit `.env.production` with the correct path.
 
 Then you can run:

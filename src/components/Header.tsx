@@ -5,12 +5,12 @@ import { title, institutions, authors } from 'data'
 
 
 export const Title = () => (
-  <Heading fontSize="2xl" pt="3rem" maxW="42rem" textAlign="center">{title}</Heading>
+  <Heading fontSize="2xl" pt="3rem" maxW="60rem" textAlign="center">{title}</Heading>
 )
 
 
 export const Authors = () => (
-  <Container>
+  <Container maxW="60rem">
     <Wrap justify="center" pt="1rem" fontSize="xl" key="authors">
       {
         authors.map((author) =>
