@@ -52,4 +52,4 @@ export const citationYear = "2023"
 export const citationBooktitle = "Arxiv"
 
 // Video
-export const video_url = "https://www.youtube.com/embed/ScMzIvxBSi4"
+export const video_url = "https://www.youtube.com/embed/EExD5zaxctE"  // placeholder: ScMzIvxBSi4
