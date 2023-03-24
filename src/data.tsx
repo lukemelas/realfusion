@@ -38,7 +38,7 @@ export const authors = [
 
 // Links
 export const links = {
-  'paper': "#", // "https://arxiv.org/abs/2002.00733",
+  'paper': "https://arxiv.org/abs/2302.10663", // "https://arxiv.org/abs/2002.00733",
   'github': "https://github.com/lukemelas/realfusion"
 }
 
