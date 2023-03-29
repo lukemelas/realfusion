@@ -20,14 +20,14 @@ export const authors = [
     'url': "https://github.com/lukemelas/"
   },
   {
-    'name': 'Christian Rupprecht',
-    'institutions': [1],
-    'url': "https://chrirupp.github.io/"
-  },
-  {
     'name': 'Iro Laina',
     'institutions': [1],
     'url': "http://campar.in.tum.de/Main/IroLaina"
+  },
+  {
+    'name': 'Christian Rupprecht',
+    'institutions': [1],
+    'url': "https://chrirupp.github.io/"
   },
   {
     'name': 'Andrea Vedaldi',
@@ -47,7 +47,7 @@ export const acknowledgements = "L.M.K. is supported by the Rhodes Trust. A.V. a
 
 // Citation
 export const citationId = "melaskyriazi2023realfusion"
-export const citationAuthors = "Luke Melas-Kyriazi and Christian Rupprecht and Iro Laina and Andrea Vedaldi"
+export const citationAuthors = "Luke Melas-Kyriazi and Iro Laina and Christian Rupprecht and Andrea Vedaldi"
 export const citationYear = "2023"
 export const citationBooktitle = "Arxiv"
 
