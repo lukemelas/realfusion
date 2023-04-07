@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="40.14 45.483 385.667 283.504" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <ellipse class="cls-1" cx="223.82" cy="249.231" rx="179.637" ry="48.82" style="fill: none; stroke: rgb(0, 0, 0); stroke-miterlimit: 10;"/>
+  <line class="cls-1" x1="222.045" y1="251.391" x2="222.045" y2="59.531" style="fill: none; stroke: rgb(0, 0, 0); stroke-miterlimit: 10;"/>
+  <polygon points="227.555 64.441 222.045 60.181 216.545 64.441 222.045 51.431 227.555 64.441"/>
+  <polygon class="cls-2" points="226.345 62.881 222.045 52.741 222.045 59.551 226.345 62.881" style="fill: rgb(166, 166, 166);"/>
+  <polygon class="cls-3" points="217.755 62.881 222.045 52.741 222.045 59.551 217.755 62.881" style="fill: rgb(102, 102, 102);"/>
+  <circle class="cls-4" cx="222.295" cy="250.801" r="2.25" style="stroke: rgb(0, 0, 0); stroke-miterlimit: 10;"/>
+  <line class="cls-1" x1="222.065" y1="250.651" x2="413.925" y2="249.911" style="fill: none; stroke: rgb(0, 0, 0); stroke-miterlimit: 10;"/>
+  <polygon points="409.035 255.441 413.275 249.921 408.995 244.431 422.025 249.881 409.035 255.441"/>
+  <polygon class="cls-2" points="410.585 254.231 420.715 249.891 413.905 249.911 410.585 254.231" style="fill: rgb(166, 166, 166);"/>
+  <polygon class="cls-3" points="410.555 245.631 420.715 249.891 413.905 249.911 410.555 245.631" style="fill: rgb(102, 102, 102);"/>
+  <line class="cls-1" x1="223.615" y1="248.481" x2="152.437" y2="322.029" style="fill: none; stroke: rgb(0, 0, 0); stroke-miterlimit: 10;"/>
+  <polygon class="cls-2" points="153.275 314.741 149.145 324.951 153.965 320.131 153.275 314.741" style="fill: rgb(166, 166, 166);"/>
+  <polygon class="cls-3" points="159.355 320.821 149.145 324.951 153.965 320.131 159.355 320.821" style="fill: rgb(102, 102, 102);"/>
+  <path d="M 252.455 162.741 C 252.455 158.651 254.115 155.531 257.135 155.531 C 260.155 155.531 261.645 158.431 261.645 162.741 C 261.645 167.241 260.185 170.181 257.075 170.181 C 254.215 170.181 252.455 167.641 252.455 162.741 Z M 259.895 161.981 C 259.895 159.141 258.975 156.831 257.035 156.831 C 255.255 156.831 254.195 159.261 254.195 161.981 L 259.895 161.981 Z M 254.195 163.301 C 254.195 166.861 255.395 168.881 257.115 168.881 C 258.995 168.881 259.895 166.561 259.895 163.301 L 254.195 163.301 Z"/>
+  <path class="cls-1" d="M 222.235 172.891 C 239.927 172.833 257.087 178.939 270.765 190.161" style="fill: none; stroke: rgb(0, 0, 0); stroke-miterlimit: 10;"/>
+  <polygon class="cls-5" points="311.555 139.641 321.345 148.501 313.555 153.631 304.655 147.191 311.555 139.641" style="fill: rgb(153, 153, 153); opacity: 0.5; stroke: rgb(0, 0, 0); stroke-miterlimit: 10;"/>
+  <line class="cls-1" x1="321.345" y1="262.391" x2="313.335" y2="269.231" style="fill: none; stroke: rgb(0, 0, 0); stroke-miterlimit: 10;"/>
+  <line class="cls-6" x1="321.345" y1="148.501" x2="222.365" y2="250.641" style="fill: none; stroke: rgb(0, 0, 0); stroke-miterlimit: 10; stroke-width: 0.5px;"/>
+  <line class="cls-7" x1="321.345" y1="262.391" x2="321.345" y2="148.501" style="fill: none; stroke: rgb(0, 0, 0); stroke-dasharray: 2px; stroke-miterlimit: 10;"/>
+  <polyline class="cls-1" points="313.335 269.231 222.365 250.641 321.345 262.391" style="fill: none; stroke: rgb(0, 0, 0); stroke-miterlimit: 10;"/>
+  <line class="cls-7" x1="313.335" y1="153.631" x2="313.335" y2="269.231" style="fill: none; stroke: rgb(0, 0, 0); stroke-dasharray: 2px; stroke-miterlimit: 10;"/>
+  <line class="cls-6" x1="222.365" y1="250.641" x2="313.335" y2="153.631" style="fill: none; stroke: rgb(0, 0, 0); stroke-miterlimit: 10; stroke-width: 0.5px;"/>
+  <line class="cls-6" x1="304.655" y1="147.191" x2="222.365" y2="250.641" style="fill: none; stroke: rgb(0, 0, 0); stroke-miterlimit: 10; stroke-width: 0.5px;"/>
+  <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 1.69782px;" transform="matrix(0, -0.556174, 0.621805, 0, -89.936821, 665.692749)" d="M 747.174 215.482 A 288.834 288.834 0 1 1 747.174 793.15 L 747.174 215.482 Z" bx:shape="crescent 747.174 504.316 288.834 180 0.5 1@5085544d"/>
+</svg>
