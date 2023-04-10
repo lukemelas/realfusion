@@ -180,6 +180,10 @@ class NeRFRenderer(nn.Module):
         vertices = vertices.astype(np.float32)
         triangles = triangles.astype(np.int32)
 
+        # Enables mesh exporting (issue #3)
+        v = torch.from_numpy(vertices).contiguous().float().to(self.aabb_train.device)
+        f = torch.from_numpy(triangles).contiguous().int().to(self.aabb_train.device)
+
         def _export(v, f, h0=2048, w0=2048, ssaa=1, name=''):
             # v, f: torch Tensor
             device = v.device
@@ -321,6 +325,9 @@ class NeRFRenderer(nn.Module):
                 fp.write(f'illum 1 \n')
                 fp.write(f'Ns 0.000000 \n')
                 fp.write(f'map_Kd {name}albedo.png \n')
+
+        # Enables mesh exporting (issue #3)
+        _export(v, f)
 
     def run(self, rays_o, rays_d, num_steps=128, upsample_steps=128, light_d=None, ambient_ratio=1.0, shading='albedo', bg_color=None, perturb=False, **kwargs):
         raise NotImplementedError('Please use `cuda_ray`. I never used this, so I did not implement it. If you need it, let me know by leaving an issue and I can implement it.')
