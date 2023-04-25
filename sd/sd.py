@@ -59,7 +59,7 @@ class StableDiffusion(nn.Module):
         
         # Predict the noise residual with unet and classifier-free guidance. NO GRAD!
         with torch.no_grad():
-
+            #
             # Sample noise
             if noise is None:
                 noise = torch.randn_like(latents)
@@ -75,20 +75,26 @@ class StableDiffusion(nn.Module):
             noise_pred_uncond, noise_pred_text = noise_pred.chunk(2)
             noise_pred = noise_pred_uncond + guidance_scale * (noise_pred_text - noise_pred_uncond)
 
-            # Weight function. Can also use `w = self.alphas[t] ** 0.5 * (1 - self.alphas[t])` or maybe `w = 1`
-            w = (1 - self.alphas[t])
-            grad = lambda_grad * w * (noise_pred - noise)
-        
-            # Mask
-            if mask_grad is not None:
-                mask_grad = F.interpolate(mask_grad, (64, 64), mode='bilinear', align_corners=False)
-                grad = grad * mask_grad
+            grad = noise_pred/self.alphas[t] #this should be actually divided by chosen sigma_s
 
-            # (Not sure if necessary) clip grad for stable training? Maybe `grad = grad.clamp(-10, 10)` ?
+            grad = grad.clamp(-10, 10)
             grad = torch.nan_to_num(grad)
+            #Mean will be taken due to PAAS algorithm
+            # grad = grad.mean(0, keepdim=True)
+
+            # # Weight function. Can also use `w = self.alphas[t] ** 0.5 * (1 - self.alphas[t])` or maybe `w = 1`
+            # w = (1 - self.alphas[t])
+            # grad = lambda_grad * w * (noise_pred - noise)
+        
+            # # Mask
+            # if mask_grad is not None:
+            #     mask_grad = F.interpolate(mask_grad, (64, 64), mode='bilinear', align_corners=False)
+            #     grad = grad * mask_grad
+
+
 
         # Manually backward, since we omitted an item in grad and cannot simply autodiff.
-        latents.backward(gradient=grad, retain_graph=True)
+        latents.backward(-grad, retain_graph=True)
 
         # Return something to represent the loss
         pseudo_loss = grad.abs().mean().detach()
